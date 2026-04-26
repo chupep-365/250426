@@ -23,7 +23,7 @@ int main() {
     std::string str = {"The tactical radar detected"
                        " a fast racecar while the civic"
                        " leader used a kayak to cross the river" }; 
-    u_int32_t k{3};                                                     // top k longest palindromes to replace
+    u_int32_t k{3};                                                                  // top k longest palindromes to replace
     std::string delim = {" ,.!?;:"};
     u_int32_t plndrms = plndrms_amount(str, delim);
     if(plndrms < k) {
@@ -55,7 +55,7 @@ bool is_palindrom(std::string str) {                                    // check
     }
    std::string::iterator L = str.begin();
    std::string::iterator R = str.end() - 1; 
-   while(L != R) {
+   while(L < R) {
         if(*L != *R) {
             return false;
         }
